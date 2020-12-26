@@ -6,3 +6,4 @@ env_path = Path('../.env')
 load_dotenv(dotenv_path=env_path)
 
 MONGODB_CONNECTION_STRING = environ.get('MONGODB_CONNECTION_STRING')
+JWT_SECRET_KEY = environ.get('JWT_SECRET_KEY')

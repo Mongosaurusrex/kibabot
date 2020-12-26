@@ -1,6 +1,8 @@
 # kibabot
 
 create .env in root of flask-app
+ - MONGODB_CONNECTION_STRING
+ - JWT_SECRET_KEY
 
 1. install pip
 2. pip3 install --user pipenv
