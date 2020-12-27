@@ -6,10 +6,11 @@ from database.db import initialize_db
 from resources.routes import initialize_routes
 from utils.settings import MONGODB_CONNECTION_STRING, JWT_SECRET_KEY
 from flask_jwt_extended import JWTManager
+from utils.errors import errors
 
 app = Flask(__name__)
 app.config['JWT_SECRET_KEY'] = JWT_SECRET_KEY
-api = Api(app)
+api = Api(app, errors=errors)
 bcrypt = Bcrypt(app)
 jwt = JWTManager(app)
 
